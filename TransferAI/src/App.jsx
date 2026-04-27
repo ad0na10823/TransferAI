@@ -2,12 +2,29 @@ import { useState } from 'react'
 
 
 function App() {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({ performance: 7, injury: 3});
   const [output, setOutput] = useState("");
+  const [prices, setPrices] = useState(null);
+  const[loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
+  const analyze = async () => {
+    setLoading(true);
+    setOutput("");
+    setPrices(null);
+
+    const prompt = `You are a senior sports transfer analyst. Provide a transfer valuation report.
+    Player: ${form.name || 'Unknown'}, Sport: ${form.sport || 'Soccer'}
+    Age: ${form.age}, Position: ${form.position}, Nationality: ${form.nationality}
+    Current team: ${form.currentTeam} -> Target: ${form.targetTeam}
+    Contract: ${form.contract}, Estimated value: ${form.value}
+Buying urgency: ${form.urgency}, Competition: ${form.competition}
+Performance rating: ${form.performance}/10, Injury risk: ${form.injury}/10
+    `
+  }
 
   return (
     <div className="app">
