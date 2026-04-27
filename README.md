@@ -1,4 +1,4 @@
-🚀 Transfer Intelligence AI
+🚀 TRANSFER INTELLIGENCE AI
 
 AI-powered sports transfer valuation and negotiation system that generates data-driven player market values, deal structures, and negotiation strategies using local LLM inference.
 
