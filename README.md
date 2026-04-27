@@ -66,18 +66,18 @@ UI Dashboard (valuation + insights)
   
 ⚙️ Setup Instructions
 1. Clone repository
-git clone https://github.com/your-username/TransferAI.git
-cd TransferAI
+- git clone https://github.com/your-username/TransferAI.git
+- cd TransferAI
 
 2. Install dependencies
-npm install
+- npm install
 
 3. Start Ollama
-ollama serve
-ollama run llama3
+- ollama serve
+- ollama run llama3
 
 4. Run frontend
-npm run dev
+- npm run dev
 
 🧪 Example Output
 PRICES: €28M | €42M | €65M
